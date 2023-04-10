@@ -9,6 +9,7 @@
         num2 = Math.round(Math.random() * (8)) + 1;
 
         sumNum = num1 + num2;
+        alert(sumNum);
     }
 
     /**
