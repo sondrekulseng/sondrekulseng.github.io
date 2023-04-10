@@ -44,7 +44,11 @@
 
         $("#inpEmail").val("");
         $("#inpMessage").val("");
-        alert("Skjema sendt! Takk for at du tok kontakt.")
+        $("#errorMsg").html("");
+        $("#inpCaptcha").css("border","1px solid black");
+        $("#divOk").css("display","block");
+        $("#frmContact").css("display","none");
+        myCaptcha.reset();
       });
 
       function currentDate() {
@@ -69,7 +73,8 @@
         callback: function (response, $captchaInputElement, numberOfTries) {
 
                 if (response == 'error') {
-                  alert("Ugyldig svar på captcha. Prøv på nytt.");
+                  $("#inpCaptcha").css("border","1px solid red");
+$                 ("#errorMsg").html("Feil svar. Prøv på nytt");
                   throw new Error("Something went badly wrong!");
                 }
         }
@@ -109,6 +114,17 @@
         padding: 30px;
         box-shadow: 15px 10px 10px lightgrey;
         margin-top: 3em;
+      }
+
+      #divOk {
+        display: none;
+        width: 80%;
+        margin: auto;
+      }
+
+      #errorMsg {
+        color: red;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -171,11 +187,13 @@
 
     <div class="container">
       <h3>Kontakt meg</h3>
+      <div class="alert alert-success" id="divOk">Skjema sendt. Takk for at du tok kontakt!</div>
       <form class="form-group" id="frmContact">
         <input type="email" class="form-control" id="inpEmail" placeholder="Din e-post" required>
         <textarea class="form-control" id="inpMessage" placeholder="Melding" required></textarea>
         <div style="float: left">
-          <input class="jCaptcha" type="text" placeholder="Type in result please" required>
+          <input class="jCaptcha" type="text" id="inpCaptcha" placeholder="Type in result please" required>
+          <span id="errorMsg"></span>
         </div>
         <br><br><button class="btn btn-primary" type="submit" style="width: 100%">Send skjema</button>
       </form>
