@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="JBmgtQ4TgKooVsI1-6kdnELYObtHZckNO0XyQ_sj6Pk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sondre Kulseng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +75,7 @@
 
                 if (response == 'error') {
                   $("#inpCaptcha").css("border","1px solid red");
-$                 ("#errorMsg").html("Feil svar. Prøv på nytt");
+                  $("#errorMsg").html("Feil svar. Prøv på nytt");
                   throw new Error("Something went badly wrong!");
                 }
         }
@@ -116,6 +117,16 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
         margin-top: 3em;
       }
 
+      .headerText {
+        font-size: 5em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+
+      .customCard {
+        width: 18rem;
+      }
+
       #divOk {
         display: none;
         width: 80%;
@@ -126,11 +137,38 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
         color: red;
         font-weight: bold;
       }
+
+      @media only screen and (max-width: 800px) {
+        body {
+          width: 100%;
+        }
+
+        .form-group {
+          width: 100%;
+        }
+
+        .headerText {
+          font-size: 2em;
+        }
+
+        .container {
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: 30px;
+          box-shadow: 0px 0px 0px white;
+          margin-top: 3em;
+        }
+
+        img {
+          height: 0px;
+        }
+
+      }
     </style>
   </head>
   <body>
     <div class="header">
-      <h1 style="font-size: 5em; font-weight: bold; margin-bottom: 0.5em;">Hei, jeg er Sondre 👋</h1>
+      <h1 class="headerText">Hei, jeg er Sondre 👋</h1>
       <h2>Utvikler | Linux entusiast | Oslo</h2>
       <a target="_blank" href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/"><img src="media/linkedin.png" style="height: 2em"></a> -
       <a target="_blank" href="https://github.com/sondrekulseng"><img src="media/github.png" style="height: 2em"></a>
@@ -140,7 +178,7 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
       <h1>Tidligere prosjekter</h1>
       <div class="row">
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card" class="customCard">
             <img class="card-img-top" src="media/linux.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Aircrack.sh</h5>
@@ -151,7 +189,7 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
         </div>
 
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card" class="customCard">
             <img class="card-img-top" src="media/flask.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Flask nettbutikk</h5>
@@ -162,7 +200,7 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
         </div>
 
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card" class="customCard">
             <img class="card-img-top" src="media/python.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Python chatbot</h5>
@@ -173,7 +211,7 @@ $                 ("#errorMsg").html("Feil svar. Prøv på nytt");
         </div>
 
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card" class="customCard">
             <img class="card-img-top" src="media/java.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Java GUI butikk</h5>
