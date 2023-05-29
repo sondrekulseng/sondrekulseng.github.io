@@ -12,149 +12,83 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
       body {
-        margin: auto;
-        width: 70%;
         font-family: 'Lato', sans-serif;
+        background-color: #f6f6f6;
+      }
+
+      .content {
         text-align: center;
-        padding-top: 5em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
       }
 
-      img {
-        height: 200px;
+      a {
+        color: white;
+        text-decoration: none;
       }
 
-      .card:hover {
-        border-color: blue;
-        transition: 1s;
-        box-shadow: 5px 10px #888888;
+      a:hover {
+        font-weight: bold;
+        color: white;
+        text-decoration: underline;
       }
 
-      .form-group {
-        width: 80%;
-        margin: auto;
+      .punctuation {
+        color: #7FFFD4;
       }
 
-      .form-control {
-        margin-bottom: 1em;
-      }
-
-      .container {
-        border: 1px solid black;
-        border-radius: 15px;
-        padding: 30px;
-        box-shadow: 15px 10px 10px lightgrey;
-        margin-top: 3em;
-      }
-
-      .headerText {
+      /* Iyping animation: https://codepen.io/denic/pen/GRoOxbM */
+      .header-text {
+        margin-left: 0.7em;
         font-size: 5em;
         font-weight: bold;
-        margin-bottom: 0.5em;
+        width: 17ch;
+        animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
       }
 
-      .customCard {
-        width: 18rem;
+      @keyframes typing {
+        from {
+          width: 0
+        }
       }
 
-      #divOk {
-        display: none;
-        width: 80%;
-        margin: auto;
+      @keyframes blink {
+        50% {
+          border-color: transparent
+        }
       }
 
-      #errorMsg {
-        color: red;
-        font-weight: bold;
-      }
-
-      .captcha {
-        float: left;
-      }
-
+      /* Mobile devices */
       @media only screen and (max-width: 800px) {
-        body {
-          width: 100%;
-          padding-top: 2em;
+        .content {
+            width: 90%;
         }
 
-        .form-group {
-          width: 100%;
+        .btn {
+          display: block;
+          margin-bottom: 0.5em;
         }
 
-        .headerText {
+        .header-text {
           font-size: 2em;
-        }
-
-        .container {
-          border: 1px solid black;
-          border-radius: 15px;
-          padding: 30px;
-          box-shadow: 0px 0px 0px white;
-          margin-top: 3em;
-        }
-
-        img {
-          height: 0px;
         }
 
       }
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1 class="headerText">Hei, jeg er Sondre 👋</h1>
-      <h2>Utvikler | Linux entusiast | Oslo</h2>
-      <a target="_blank" href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/"><img src="media/linkedin.png" style="height: 2em"></a> -
-      <a target="_blank" href="https://github.com/sondrekulseng"><img src="media/github.png" style="height: 2em"></a>
-    </div>
-
-    <div class="container">
-      <h1>Tidligere prosjekter</h1>
-      <div class="row">
-        <div class="col-sm">
-          <div class="card" class="customCard">
-            <img class="card-img-top" src="media/linux.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Aircrack.sh</h5>
-              <p class="card-text">Bash script for penetrasjonstesting av trådløse nettverk.</p>
-              <a target="_blank" href="https://github.com/sondrekulseng/aircrack.sh" class="btn btn-primary">Vis prosjekt</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm">
-          <div class="card" class="customCard">
-            <img class="card-img-top" src="media/flask.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Flask nettbutikk</h5>
-              <p class="card-text">Nettbutikk implementert i Python med Flask rammeverket.</p>
-              <a target="_blank" href="https://github.com/sondrekulseng/Flask-webshop" class="btn btn-primary">Vis prosjekt</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm">
-          <div class="card" class="customCard">
-            <img class="card-img-top" src="media/python.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Python chatbot</h5>
-              <p class="card-text">Et program hvor flere chatboter kan snakke med hverandre.</p>
-              <a target="_blank" href="https://github.com/sondrekulseng/Python-chatbot" class="btn btn-primary">Vis prosjekt</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm">
-          <div class="card" class="customCard">
-            <img class="card-img-top" src="media/java.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Java GUI butikk</h5>
-              <p class="card-text">En Java GUI applikasjon der man kan bygge en egen PC.</p>
-              <a target="_blank" href="https://github.com/sondrekulseng/Programutvikling-oppgave" class="btn btn-primary">Vis prosjekt</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="content">
+      <h1 class="header-text">Hei<span class="punctuation">.</span> Jeg er Sondre<span class="punctuation">.</span>💻</h1>
+      <h2>Utvikler | Sopra Steria</h2>
+      <br>
+      <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
+      <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
     </div>
   </body>
 </html>
