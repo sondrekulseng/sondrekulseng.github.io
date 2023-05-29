@@ -43,6 +43,15 @@
         padding: 1em;
       }
 
+      .sertifiseringer {
+        position: absolute;
+        left: 50%;
+        top: 200%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        width: 40%;
+      }
+
       a {
         color: white;
         text-decoration: none;
@@ -98,11 +107,12 @@
 
         .projects {
           width: 90%;
-          position: absolute;
-          left: 50%;
           top: 200%;
-          -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+        }
+
+        .sertifiseringer {
+          width: 90%;
+          top: 240%;
         }
 
       }
@@ -117,7 +127,7 @@
         <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
         <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
         <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Tidligere prosjekter</a>
-        <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Kompetanse</a>
+        <a href="#sertifiseringer" class="btn btn-dark" style="font-size: 1.2em;">Sertifiseringer</a>
       </div>
 
       <div class="projects" id="projects">
@@ -137,6 +147,15 @@
           <p>Nettbutikk for kjøp av sportsutstyr.</p>
           <a href="https://github.com/sondrekulseng/Flask-webshop" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
         </div>
-    </div>
+      </div>
+
+      <div class="sertifiseringer" id="sertifiseringer">
+        <h1 style="text-align: center; font-weight: bold;">Sertifiseringer</h1>
+        <div class="project-container">
+          <h3>AZ-900 - Azure Fundamentals</h3>
+          <p>Grunnleggende sertifisering for Microsoft Azure.</p>
+          <a href="https://www.credly.com/badges/329609a1-c490-411a-a696-46a60e50965c" target="_blank" class="btn btn-dark">Vis bevis</a>
+        </div>
+      </div>
   </body>
 </html>
