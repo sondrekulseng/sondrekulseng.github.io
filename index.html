@@ -18,11 +18,29 @@
 
       .content {
         text-align: center;
+      }
+
+      .header {
         position: absolute;
         left: 50%;
         top: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+      }
+
+      .projects {
+        position: absolute;
+        left: 50%;
+        top: 160%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        width: 40%;
+      }
+
+      .project-container {
+        margin-top: 1em;
+        border: 1px solid black;
+        padding: 1em;
       }
 
       a {
@@ -65,7 +83,7 @@
 
       /* Mobile devices */
       @media only screen and (max-width: 800px) {
-        .content {
+        .header {
             width: 90%;
         }
 
@@ -78,16 +96,47 @@
           font-size: 2em;
         }
 
+        .projects {
+          width: 90%;
+          position: absolute;
+          left: 50%;
+          top: 200%;
+          -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+        }
+
       }
     </style>
   </head>
   <body>
     <div class="content">
-      <h1 class="header-text">Hei<span class="punctuation">.</span> Jeg er Sondre<span class="punctuation">.</span>💻</h1>
-      <h2>Utvikler | Sopra Steria</h2>
-      <br>
-      <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
-      <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
+      <div class="header">
+        <h1 class="header-text">Hei<span class="punctuation">.</span> Jeg er Sondre<span class="punctuation">.</span>💻</h1>
+        <h2>Utvikler | Sopra Steria</h2>
+        <br>
+        <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
+        <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
+        <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Tidligere prosjekter</a>
+        <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Kompetanse</a>
+      </div>
+
+      <div class="projects" id="projects">
+        <h1 style="text-align: center; font-weight: bold;">Tidligere prosjekter</h1>
+        <div class="project-container">
+          <h3>aircrack.sh</h3>
+          <p>Bash script for penetrasjonstesting av trådløse nettverk.</p>
+          <a href="https://github.com/sondrekulseng/aircrack.sh" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
+        </div>
+        <div class="project-container">
+          <h3>Python chatbot</h3>
+          <p>Chatbots som kommuniserer med hverandre over sockets.</p>
+          <a href="https://github.com/sondrekulseng/Python-chatbot" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
+        </div>
+        <div class="project-container">
+          <h3>Flask webshop</h3>
+          <p>Nettbutikk for kjøp av sportsutstyr.</p>
+          <a href="https://github.com/sondrekulseng/Flask-webshop" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
+        </div>
     </div>
   </body>
 </html>
