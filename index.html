@@ -31,16 +31,25 @@
       .projects {
         position: absolute;
         left: 50%;
-        top: 160%;
+        top: 161%;
         -webkit-transform: translate(-50%, -100%);
         transform: translate(-50%, -100%);
-        width: 40%;
+        width: 100%;
       }
 
       .project-container {
         margin-top: 1em;
         border: 1px solid black;
         padding: 1em;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 1em;
+      }
+
+      .project-container:hover {
+        box-shadow: 10px 5px 5px #808080;
+        transition: 0.5s;
+        transform: scale(1.02);
       }
 
       .sertifiseringer {
@@ -49,7 +58,7 @@
         top: 200%;
         -webkit-transform: translate(-50%, -100%);
         transform: translate(-50%, -100%);
-        width: 40%;
+        width: 100%;
       }
 
       a {
@@ -78,6 +87,21 @@
         border-right: 3px solid;
       }
 
+      .subheader-text {
+        opacity: 0;
+        animation: 1s 1s fadeIn forwards;
+      }
+
+      .links {
+        font-size: 1.2em;
+        opacity: 0;
+        animation: 1s 2s fadeIn forwards;
+      }
+
+      .btn {
+        font-size: 1.2em;
+      }
+
       @keyframes typing {
         from {
           width: 0
@@ -88,6 +112,11 @@
         50% {
           border-color: transparent
         }
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
       }
 
       /* Mobile devices */
@@ -105,7 +134,7 @@
           font-size: 2em;
         }
 
-        .projects {
+        .project-container {
           width: 90%;
           top: 200%;
         }
@@ -122,12 +151,14 @@
     <div class="content">
       <div class="header">
         <h1 class="header-text">Hei<span class="punctuation">.</span> Jeg er Sondre<span class="punctuation">.</span>💻</h1>
-        <h2>Utvikler | Sopra Steria</h2>
+        <h2 class="subheader-text">Utvikler | Sopra Steria</h2>
         <br>
-        <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
-        <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
-        <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Tidligere prosjekter</a>
-        <a href="#sertifiseringer" class="btn btn-dark" style="font-size: 1.2em;">Sertifiseringer</a>
+        <div class="links">
+          <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark">GitHub</a>
+          <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark">LinkedIn</a>
+          <a href="#projects" class="btn btn-dark">Tidligere prosjekter</a>
+          <a href="#sertifiseringer" class="btn btn-dark">Sertifiseringer</a>
+        </div>
       </div>
 
       <div class="projects" id="projects">
