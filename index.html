@@ -28,10 +28,10 @@
         transform: translate(-50%, -50%);
       }
 
-      .projects {
+      #projects {
         position: absolute;
         left: 50%;
-        top: 161%;
+        top: 190%;
         -webkit-transform: translate(-50%, -100%);
         transform: translate(-50%, -100%);
         width: 40%;
@@ -49,10 +49,19 @@
         transform: scale(1.02);
       }
 
-      .sertifiseringer {
+      #sertifiseringer {
         position: absolute;
         left: 50%;
-        top: 200%;
+        top: 230%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        width: 40%;
+      }
+
+      #presentasjoner {
+        position: absolute;
+        left: 50%;
+        top: 290%;
         -webkit-transform: translate(-50%, -100%);
         transform: translate(-50%, -100%);
         width: 40%;
@@ -94,6 +103,14 @@
         animation: 1s 2s fadeIn forwards;
       }
 
+      .video-link {
+        display: none;
+      }
+
+      .video-frame {
+        display: block;
+      }
+
       @keyframes typing {
         from {
           width: 0
@@ -126,14 +143,27 @@
           font-size: 2em;
         }
 
-        .projects {
+        #projects {
           width: 90%;
           top: 200%;
         }
 
-        .sertifiseringer {
+        #sertifiseringer {
           width: 90%;
           top: 240%;
+        }
+
+        #presentasjoner {
+          width: 90%;
+          top: 265%;
+        }
+
+        .video-link {
+          display: block;
+        }
+
+        .video-frame {
+          display: none;
         }
 
       }
@@ -146,19 +176,24 @@
         <h2 class="subheader-text">Utvikler | Sopra Steria</h2>
         <br>
         <div class="links">
-          <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
           <a href="https://www.linkedin.com/in/sondre-kulseng-2b01021a3/" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
-          <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Tidligere prosjekter</a>
+          <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">GitHub prosjekter</a>
           <a href="#sertifiseringer" class="btn btn-dark" style="font-size: 1.2em;">Sertifiseringer</a>
+          <a href="#presentasjoner" class="btn btn-dark" style="font-size: 1.2em;">Presentasjoner</a>
         </div>
       </div>
 
-      <div class="projects" id="projects">
-        <h1 style="text-align: center; font-weight: bold;">Tidligere prosjekter</h1>
+      <div id="projects">
+        <h1 style="text-align: center; font-weight: bold;">GitHub prosjekter</h1>
         <div class="project-container">
           <h3>aircrack.sh</h3>
           <p>Bash script for penetrasjonstesting av trådløse nettverk.</p>
           <a href="https://github.com/sondrekulseng/aircrack.sh" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
+        </div>
+        <div class="project-container">
+          <h3>Websocket chat</h3>
+          <p>A simple web application that allows users to chat with eachother in real-time using websockets.</p>
+          <a href="https://github.com/sondrekulseng/websocket-chat" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
         </div>
         <div class="project-container">
           <h3>Python chatbot</h3>
@@ -172,13 +207,22 @@
         </div>
       </div>
 
-      <div class="sertifiseringer" id="sertifiseringer">
+      <div id="sertifiseringer">
         <h1 style="text-align: center; font-weight: bold;">Sertifiseringer</h1>
         <div class="project-container">
           <h3>AZ-900 - Azure Fundamentals</h3>
           <p>Grunnleggende sertifisering for Microsoft Azure.</p>
           <a href="https://www.credly.com/badges/329609a1-c490-411a-a696-46a60e50965c" target="_blank" class="btn btn-dark">Vis bevis</a>
         </div>
+      </div>
+
+      <div id="presentasjoner">
+        <h1 style="text-align: center; font-weight: bold;">Presentasjoner</h1>
+        <h3>Testautomatisering i Statnett</h3>
+        <div class="video-frame">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NWAnVX5mIdo?si=Ss1LEBI2iepBpTsH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <a src="https://youtu.be/NWAnVX5mIdo?si=kBQuQPEkRdNxiGxd" class="btn btn-dark video-link" target="_blank">Vis på YouTube</a>
       </div>
   </body>
 </html>
