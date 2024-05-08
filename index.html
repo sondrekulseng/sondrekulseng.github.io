@@ -49,7 +49,7 @@
         transform: scale(1.02);
       }
 
-      #sertifiseringer {
+      #certifications {
         position: absolute;
         left: 50%;
         top: 230%;
@@ -58,7 +58,7 @@
         width: 40%;
       }
 
-      #presentasjoner {
+      #presentations {
         position: absolute;
         left: 50%;
         top: 290%;
@@ -86,8 +86,8 @@
       .header-text {
         font-size: 5em;
         font-weight: bold;
-        width: 17ch;
-        animation: typing 2s steps(17), blink .5s step-end infinite alternate;
+        width: 16ch;
+        animation: typing 1.5s steps(16), blink .5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid;
@@ -100,7 +100,7 @@
 
       .links {
         opacity: 0;
-        animation: 1s 2s fadeIn forwards;
+        animation: 1s 1.5s fadeIn forwards;
       }
 
       .video-link {
@@ -148,12 +148,12 @@
           top: 240%;
         }
 
-        #sertifiseringer {
+        #certifications {
           width: 90%;
           top: 285%;
         }
 
-        #presentasjoner {
+        #presentations {
           width: 90%;
           top: 315%;
         }
@@ -172,57 +172,53 @@
   <body>
     <div class="content">
       <div class="header">
-        <h1 class="header-text">Hei<span class="punctuation">.</span> Jeg er Sondre<span class="punctuation">.</span>💻</h1>
-        <h2 class="subheader-text">Utvikler | Sopra Steria</h2>
+        <h1 class="header-text">Hello<span class="punctuation">.</span> I'm Sondre 👋</h1>
+        <h2 class="subheader-text">Developer | Sopra Steria</h2>
         <br>
         <div class="links">
           <a href="https://www.linkedin.com/in/sondre-kulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">LinkedIn</a>
-          <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">GitHub prosjekter</a>
-          <a href="#sertifiseringer" class="btn btn-dark" style="font-size: 1.2em;">Sertifiseringer</a>
-          <a href="#presentasjoner" class="btn btn-dark" style="font-size: 1.2em;">Presentasjoner</a>
+          <a href="https://github.com/sondrekulseng" target="_blank" class="btn btn-dark" style="font-size: 1.2em;">GitHub</a>
+          <a href="#projects" class="btn btn-dark" style="font-size: 1.2em;">Personal projects</a>
+          <a href="#certifications" class="btn btn-dark" style="font-size: 1.2em;">Certifications</a>
+          <a href="#presentations" class="btn btn-dark" style="font-size: 1.2em;">Presentations</a>
         </div>
       </div>
 
       <div id="projects">
-        <h1 style="text-align: center; font-weight: bold;">GitHub prosjekter</h1>
+        <h1 style="text-align: center; font-weight: bold;">Personal projects</h1>
+        <div class="project-container">
+          <h3>Typing champion</h3>
+          <p>Simple website where you can check your typing speed. Supports authentication and highscore submissions.</p>
+          <a href="https://typing-champion.vercel.app" target="_blank" class="btn btn-dark">View website</a>
+        </div>
         <div class="project-container">
           <h3>aircrack.sh</h3>
-          <p>Bash script for penetrasjonstesting av trådløse nettverk.</p>
-          <a href="https://github.com/sondrekulseng/aircrack.sh" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
-        </div>
-        <div class="project-container">
-          <h3>Websocket chat</h3>
-          <p>A simple web application that allows users to chat with eachother in real-time using websockets.</p>
-          <a href="https://github.com/sondrekulseng/websocket-chat" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
-        </div>
-        <div class="project-container">
-          <h3>Python chatbot</h3>
-          <p>Chatbots som kommuniserer med hverandre over sockets.</p>
-          <a href="https://github.com/sondrekulseng/Python-chatbot" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
-        </div>
-        <div class="project-container">
-          <h3>Flask webshop</h3>
-          <p>Nettbutikk for kjøp av sportsutstyr.</p>
-          <a href="https://github.com/sondrekulseng/Flask-webshop" target="_blank" class="btn btn-dark">Åpne i GitHub</a>
+          <p>Bash script for penetration testing wireless networks. For educational use.</p>
+          <a href="https://github.com/sondrekulseng/aircrack.sh" target="_blank" class="btn btn-dark">View on GitHub</a>
         </div>
       </div>
 
-      <div id="sertifiseringer">
-        <h1 style="text-align: center; font-weight: bold;">Sertifiseringer</h1>
+      <div id="certifications">
+        <h1 style="text-align: center; font-weight: bold;">Certifications</h1>
         <div class="project-container">
           <h3>AZ-900 - Azure Fundamentals</h3>
-          <p>Grunnleggende sertifisering for Microsoft Azure.</p>
-          <a href="https://www.credly.com/badges/329609a1-c490-411a-a696-46a60e50965c" target="_blank" class="btn btn-dark">Vis bevis</a>
+          <p>Demonstrate foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance features and tools. </p>
+          <a href="https://www.credly.com/badges/329609a1-c490-411a-a696-46a60e50965c" target="_blank" class="btn btn-dark">Show certification</a>
+        </div>
+        <div class="project-container">
+          <h3>Kotlin for Java Developers</h3>
+          <p>Course covering the core concepts of Kotlin and explaining its interoperability with Java.</p>
+          <a href="https://coursera.org/share/a66c45b8256bd19214803e8d3bed0e14" target="_blank" class="btn btn-dark">Show certification</a>
         </div>
       </div>
 
-      <div id="presentasjoner">
-        <h1 style="text-align: center; font-weight: bold;">Presentasjoner</h1>
-        <h3>Testautomatisering i Statnett</h3>
+      <div id="presentations">
+        <h1 style="text-align: center; font-weight: bold;">Presentations</h1>
+        <h3>Test automation in Statnett</h3>
         <div class="video-frame">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/NWAnVX5mIdo?si=Ss1LEBI2iepBpTsH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <a href="https://youtu.be/NWAnVX5mIdo?si=kBQuQPEkRdNxiGxd" class="btn btn-dark video-link" target="_blank">Vis på YouTube</a>
+        <a href="https://youtu.be/NWAnVX5mIdo?si=kBQuQPEkRdNxiGxd" class="btn btn-dark video-link" target="_blank">View on YouTube</a>
       </div>
   </body>
 </html>
