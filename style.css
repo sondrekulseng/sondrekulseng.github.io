@@ -1,0 +1,77 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f6f6f6;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+img {
+    height: 40px;
+}
+
+/* Typing animation: https://codepen.io/denic/pen/GRoOxbM */
+.header-text {
+    font-size: 5em;
+    font-weight: bold;
+    width: 16ch;
+    animation: typing 1.5s steps(16), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+.subheader-text {
+    font-size: 2em;
+    opacity: 0;
+    animation: 1s 1s fadeIn forwards;
+}
+
+.links {
+    opacity: 0;
+    animation: 1s 1.5s fadeIn forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 800px) {
+    .header {
+        width: 90%;
+    }
+
+    img {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    .header-text {
+        font-size: 2em;
+    }
+}
