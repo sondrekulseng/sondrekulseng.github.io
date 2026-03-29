@@ -29,6 +29,10 @@ p, a {
   font-size: 1.4rem;
 }
 
+a:hover {
+  font-weight: bold;
+}
+
 .inline-links {
   display: flex;
   flex-direction: row;
